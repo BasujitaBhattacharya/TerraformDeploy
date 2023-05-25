@@ -19,12 +19,6 @@ stages:
             displayName: tfinstall
             inputs:
               terraformVersion: 'latest' # Use a specific stable version for prod workloads so breaking changes from version updates won't affect specific pipelines.
-          - task: CmdLine@2
-            inputs:
-              script: |
-                echo  '$(Build.SourcesDirectory)\AzureDevOpsandTerraformPipelines'
-                dir
-                dir AzureDevOpsandTerraformPipelines
           - task: TerraformTaskV4@4
             displayName: init
             inputs:
@@ -56,6 +50,7 @@ stages:
             inputs:
               provider: 'azurerm'
               command: 'init'
+              workingDirectory: '$(Build.SourcesDirectory)\AzureDevOpsandTerraformPipelines'
               backendServiceArm: 'Terraform'
               backendAzureRmResourceGroupName: '$(bkstrgrg)'
               backendAzureRmStorageAccountName: '$(bkstrg)'
