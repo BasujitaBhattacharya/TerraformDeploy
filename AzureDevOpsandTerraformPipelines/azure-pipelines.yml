@@ -59,12 +59,14 @@ stages:
           - task: TerraformTaskV4@4
             displayName: plan
             inputs:
+              workingDirectory: '$(Build.SourcesDirectory)\AzureDevOpsandTerraformPipelines'
               provider: 'azurerm'
               command: 'plan'
               environmentServiceNameAzureRM: 'Terraform'
           - task: TerraformTaskV4@4
             displayName: apply
             inputs:
+              workingDirectory: '$(Build.SourcesDirectory)\AzureDevOpsandTerraformPipelines'
               provider: 'azurerm'
               command: 'apply'
               environmentServiceNameAzureRM: 'Terraform'
