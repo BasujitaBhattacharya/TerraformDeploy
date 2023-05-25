@@ -24,6 +24,7 @@ stages:
               script: |
                 echo  '$(Build.SourcesDirectory)'
                 dir
+                dir AzureDevOpsandTerraformPipelines
           - task: TerraformTaskV4@4
             displayName: init
             inputs:
