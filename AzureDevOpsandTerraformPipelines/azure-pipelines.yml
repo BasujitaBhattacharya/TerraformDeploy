@@ -22,7 +22,7 @@ stages:
           - task: CmdLine@2
             inputs:
               script: |
-                echo  '$(Build.SourcesDirectory)'
+                echo  '$(Build.SourcesDirectory)\AzureDevOpsandTerraformPipelines'
                 dir
                 dir AzureDevOpsandTerraformPipelines
           - task: TerraformTaskV4@4
@@ -30,7 +30,7 @@ stages:
             inputs:
               provider: 'azurerm'
               command: 'init'
-              workingDirectory: '$(Build.SourcesDirectory)'
+              workingDirectory: '$(Build.SourcesDirectory)\AzureDevOpsandTerraformPipelines'
               backendServiceArm: 'Terraform'
               backendAzureRmResourceGroupName: '$(bkstrgrg)'
               backendAzureRmStorageAccountName: '$(bkstrg)'
