@@ -24,7 +24,7 @@ stages:
             inputs:
               provider: 'azurerm'
               command: 'init'
-              workingDirectory: '$(System.DefaultWorkingDirectory)\Azure DevOps and Terraform Pipelines'
+              workingDirectory: '$(System.DefaultWorkingDirectory)\AzureDevOpsandTerraformPipelines'
               backendServiceArm: 'Terraform'
               backendAzureRmResourceGroupName: '$(bkstrgrg)'
               backendAzureRmStorageAccountName: '$(bkstrg)'
