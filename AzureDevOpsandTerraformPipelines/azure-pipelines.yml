@@ -4,7 +4,7 @@ pool:
   vmImage: windows-latest
 
 variables:
-  bkstrgrg: 'terraform-demo'
+  bkstrgrg: 'rg-terraform-demo'
   bkstrg: 'stracctstate'
   bkcontainer: 'tfstate'
   bkstrgkey: 'devpipeline.terraform.tfstate'
