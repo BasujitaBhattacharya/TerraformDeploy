@@ -8,6 +8,9 @@ variables:
   bkstrg: 'stracctstate'
   bkcontainer: 'tfstate'
   bkstrgkey: 'devpipeline.terraform.tfstate'
+  resourcegroup_name: 'rg-terraform-demo'
+  location: 'canadacentral'
+
 
 stages:
   - stage: tfvalidate
