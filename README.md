@@ -1,3 +1,21 @@
+# TerraformDeployDemo
+
+## Getting started
+
+## Azure DevOps pipeline
+
+Install the [Terraform extension for Azure DevOps](https://marketplace.visualstudio.com/items?itemName=ms-devlabs.custom-terraform-tasks).
+
+You can also install it from DevOps Organisation Settings > Extensions > Browse Marketplace > Search for Terraform > Install the microsoft provided extension.
+![image](https://github.com/BasujitaBhattacharya/TerraformDeployDemo/assets/121059306/f2c12303-6517-4cb4-af5c-4a97250498af)
+
+Create a Service Connection of type Azure Resource Manager at subscription scope. Name the Service Connection `TerraformSvcConn`.
+Allow all pipelines to use the connection.
+
+In `infrastructure/terraform-init-template.yml`, update the `TerraformBackendStorageAccount` name to a globally unique storage account name.
+The pipeline will create the storage account.
+
+
 # PublicDevOps
 Public repo for files related to Azure DevOps Videos
 
