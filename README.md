@@ -14,12 +14,9 @@ Allow all pipelines to use the connection.
 
 The Pipelines will require the following storage account configurations created in Azure to save the Terraform state:
   
-  Storage Account Resouerce Group: 'rg-terraform-state'
-  
+  Storage Account Resource Group: 'rg-terraform-state'
   Back end storage account name: 'stracctstate'
-  
   Blob storage Container name : 'tfstate'
-  
   Back end Storage Key: 'devpipeline.terraform.tfstate'
 
 Initially the blob container will be empty, once the deploy pipelines run, terrraform state files will be created inside the blob container.
