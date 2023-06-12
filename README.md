@@ -12,8 +12,11 @@ You can also install it from DevOps Organisation Settings > Extensions > Browse 
 Create a Service Connection of type Azure Resource Manager at subscription scope. Name the Service Connection `TerraformSvcConn`.
 Allow all pipelines to use the connection.
 
-In `infrastructure/terraform-init-template.yml`, update the `TerraformBackendStorageAccount` name to a globally unique storage account name.
-The pipeline will create the storage account.
+The Pipelines will require the following storage account configurations created in Azure to save the Terraform state:
+  Storage Account Resouerce Group: 'rg-terraform-state'
+  Back end storage: 'stracctstate'
+  Back end Container : 'tfstate'
+  Back end Storage Key: 'devpipeline.terraform.tfstate'
 
 
 # PublicDevOps
